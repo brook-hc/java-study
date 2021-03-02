@@ -27,10 +27,10 @@ public class A_convert_wrapper_basicType {
                 //自动加载到缓存运行快，不用去new了，new了还要清理垃圾，消耗系统资源，拖慢速度。
                 Integer ab = 1; // 自动装包
                 Integer ba = 1;
-                System.out.println(ab == ba);
+                System.out.println(ab == ba); // true 因为1位于自动生成的cache数组中，故共享一个数据。
                 Integer bc = 128;
                 Integer cb = 128;
-                System.out.println(bc == cb);
+                System.out.println(bc == cb); // false，超出-128~127的数就必须new出来了。
 
 
         }
